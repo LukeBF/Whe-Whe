@@ -1,0 +1,46 @@
+:root {
+  --primary-bg-color: #aed6f1;
+  --secondary-bg-color: #2c3e50;
+
+  --primary-font-color: #000;
+  --secondary-font-color: #fff;
+
+  --primary-btn-color: #d5d8dc;
+  --action-btns: #f1c40f;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-col-1 {
+  grid-template-columns: 1fr;
+}
+
+.grid-col-2 {
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-col-3 {
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+.grid-row-2 {
+  grid-template-rows: 1fr 1fr;
+}
+
+.grid-row-3 {
+  grid-template-rows: 5vh 1fr 1fr;
+}
+
+.grid-col-5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.grid-row-1 {
+  grid-template-rows: 1fr;
+}
+
+.grid-row-5 {
+  grid-template-rows: repeat(5, 1fr);
+}
