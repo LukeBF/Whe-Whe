@@ -12,17 +12,17 @@ import {useContext} from 'react'
 const HomePage = () => {
 
     const {currencyValues} = useContext(CurrencyValuesContext)
-    console.log(currencyValues)
+    // console.log(currencyValues)
 
-    const CURRENCY_BTNS = 4
+    //const CURRENCY_BTNS = 4
 
-    let currencyValue;
+    //let currencyValue;
 
-    for(let i=0; i<CURRENCY_BTNS; i++)
-    {
-        currencyValue = currencyValues[i].value
-        console.log(currencyValue)    
-    }
+    // for(let i=0; i<CURRENCY_BTNS; i++)
+    // {
+    //     currencyValue = currencyValues[i].value
+    //     // console.log(currencyValue)    
+    // }
     
 
     return (
@@ -34,7 +34,7 @@ const HomePage = () => {
                         <img src={GameLogo} alt="game logo" />
                     </div>
                     <div className="currency grid grid-col-2">
-                        {currencyValues.map((currencyBtnVal)=>(<CurrencyButtons key={currencyBtnVal.value} value={currencyBtnVal.value}/>))}
+                        {currencyValues.map((currencyVal)=>(<CurrencyButtons key={currencyVal.value} value={currencyVal.value}/>))}
                     </div>
                     {/* <div className="currency grid grid-col-2">
                         <CurrencyButtons/>

@@ -1,18 +1,15 @@
 import SelectedNumberItems from './SelectedNumberItems'
 import SelectedNumbersContext from '../context/SelectedNumbersContext'
-import DollarValueContext from '../context/DollarValueContext'
+import BetValueContext from '../context/BetValueContext'
 import {useContext} from 'react'
 
 
 const SelectedNumbersHolder = () => {
 
     const {selectedNumbers} = useContext(SelectedNumbersContext)
-    const {dollarValue} = useContext(DollarValueContext)
+    const {betValue, setBetValue} = useContext(BetValueContext)
     
-    const updatedSelectedNumbers = [...selectedNumbers]
-    const updatedDollarValue = [...dollarValue]
-
-    
+    const updatedSelectedNumbers = [...selectedNumbers]    
 
     return (
         <>
@@ -21,7 +18,8 @@ const SelectedNumbersHolder = () => {
                     <SelectedNumberItems key={number.id} id={number.id} label={number.label}/>
                 ))}
             </div>
-            <p>Total:{updatedDollarValue}</p>
+            {/* <p>Total:{updatedBetValue}</p> */}
+            <p>Total:${betValue}</p>
         </>
     )
 }

@@ -11,7 +11,7 @@ import '../assets/css/Utilities.css'
 // Context
 import NumbersContext from '../context/NumbersContext'
 import SelectedNumbersContext from '../context/SelectedNumbersContext'
-import DollarValueContext from '../context/DollarValueContext'
+import BetValueContext from '../context/BetValueContext'
 import CurrencyValuesContext from '../context/CurrencyValuesContext'
 
 const App = () => {
@@ -36,7 +36,7 @@ const App = () => {
 
     const [numberBtns, setNumberBtns] = useState(numberBtnsArr)
     const [selectedNumbers, setSelectedNumbers] = useState([])
-    const [dollarValue, setDollarValue] = useState("$0.00")
+    const [betValue, setBetValue] = useState("$0.00")
     const [currencyValues, setCurrencyValues] = useState([
       {
         value: 1
@@ -57,11 +57,11 @@ const App = () => {
     <div>
         <NumbersContext.Provider value={{numberBtns,setNumberBtns}}>
           <SelectedNumbersContext.Provider value={{selectedNumbers,setSelectedNumbers}}>
-            <DollarValueContext.Provider value={{dollarValue,setDollarValue}}>
+            <BetValueContext.Provider value={{betValue,setBetValue}}>
               <CurrencyValuesContext.Provider value={{currencyValues,setCurrencyValues}}>
                 <HomePage />
               </CurrencyValuesContext.Provider>  
-            </DollarValueContext.Provider>
+            </BetValueContext.Provider>
           </SelectedNumbersContext.Provider>
         </NumbersContext.Provider>  
     </div>
