@@ -18,7 +18,7 @@ const SelectedNumbersHolder = () => {
                     <SelectedNumberItems key={number.id} id={number.id} label={number.label}/>
                 ))}
             </div>
-            {/* <p>Total:{updatedBetValue}</p> */}
+            
             <p>Total:${betValue}</p>
         </>
     )

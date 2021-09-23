@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 import SelectedNumbersContext from '../context/SelectedNumbersContext'
 import BetValueContext from '../context/BetValueContext'
@@ -16,13 +17,12 @@ const ActionButtons = () => {
         const BET_TOTAL = "0.00"
         setSelectedNumbers(clearedSelectedNumbers)
         setBetValue(BET_TOTAL)
-        
     }
 
     return (
         <>
-            <button>CASH</button>
-            <button onClick={clearSelected}>CLEAR</button>
+            <Link to="/cash">CASH</Link>
+            <Link to="" onClick={clearSelected}>CLEAR</Link>
         </>
     )
 }

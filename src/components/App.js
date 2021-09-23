@@ -1,8 +1,17 @@
 import React from 'react'
 import {useState} from 'react'
 
+// Router
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 // Components
 import HomePage from '../pages/HomePage'
+import CashOutPage from '../pages/CashOutPage'
 
 // CSS
 import '../assets/css/App.css'
@@ -18,6 +27,8 @@ const App = () => {
 
     const TOTAL_NUMBERS = 20
     // const CURRENCY_BTNS = 4
+
+    const BET_AMT = 0
 
     let numberBtnsArr = []
     // let currencyBtnsArr = []
@@ -36,7 +47,7 @@ const App = () => {
 
     const [numberBtns, setNumberBtns] = useState(numberBtnsArr)
     const [selectedNumbers, setSelectedNumbers] = useState([])
-    const [betValue, setBetValue] = useState("$0.00")
+    const [betValue, setBetValue] = useState(BET_AMT)
     const [currencyValues, setCurrencyValues] = useState([
       {
         value: 1
@@ -55,15 +66,34 @@ const App = () => {
     
   return (
     <div>
+      <Router>
         <NumbersContext.Provider value={{numberBtns,setNumberBtns}}>
+        <SelectedNumbersContext.Provider value={{selectedNumbers,setSelectedNumbers}}>
+        <BetValueContext.Provider value={{betValue,setBetValue}}>
+        <CurrencyValuesContext.Provider value={{currencyValues,setCurrencyValues}}>
+          <Switch>
+              <Route exact path="/">
+                  <HomePage />
+              </Route>
+              <Route path="/cash">
+                  <CashOutPage />
+              </Route>
+          </Switch>
+        </CurrencyValuesContext.Provider>  
+        </BetValueContext.Provider>
+        </SelectedNumbersContext.Provider>
+        </NumbersContext.Provider>
+      </Router>
+        {/* <NumbersContext.Provider value={{numberBtns,setNumberBtns}}>
           <SelectedNumbersContext.Provider value={{selectedNumbers,setSelectedNumbers}}>
             <BetValueContext.Provider value={{betValue,setBetValue}}>
-              <CurrencyValuesContext.Provider value={{currencyValues,setCurrencyValues}}>
-                <HomePage />
-              </CurrencyValuesContext.Provider>  
+              <CurrencyValuesContext.Provider value={{currencyValues,setCurrencyValues}}> */}
+                {/* <HomePage /> */}
+                {/* <CashOutPage /> */}
+              {/* </CurrencyValuesContext.Provider>  
             </BetValueContext.Provider>
           </SelectedNumbersContext.Provider>
-        </NumbersContext.Provider>  
+        </NumbersContext.Provider>   */}
     </div>
   )
 }

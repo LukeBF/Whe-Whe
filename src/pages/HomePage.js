@@ -5,6 +5,7 @@ import NumberButtonsHolder from '../components/NumberButtonsHolder'
 import ActionButtons from '../components/ActionButtons'
 import SelectedNumbersHolder from '../components/SelectedNumbersHolder'
 import GameLogo from '../assets/img/pick-5.png'
+import Modal from '../components/Modal'
 
 import CurrencyValuesContext from '../context/CurrencyValuesContext'
 import {useContext} from 'react'
@@ -54,6 +55,10 @@ const HomePage = () => {
                     <h2>Selected Numbers</h2>
                     <SelectedNumbersHolder />
                 </section>
+                
+                <div className="hide">
+                    <Modal />
+                </div>
             </main>
         </div>
     )

@@ -11,10 +11,9 @@ const CurrencyButtons = (props) => {
     const addCashBet = (e) => {
 
         const cashValue = parseInt(e.target.value)
-        
-        const newCashValue = parseInt(cashValue + betValue)
-    
-        setBetValue(newCashValue)
+        const newBetAmt = betValue + cashValue
+        setBetValue(newBetAmt)
+
     }
 
     return (

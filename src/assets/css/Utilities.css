@@ -7,6 +7,13 @@
 
   --primary-btn-color: #d5d8dc;
   --action-btns: #f1c40f;
+
+  --highlight-color: #fcb415;
+  --secondary-highlight-color: #ff5733;
+}
+
+a {
+  text-decoration: none;
 }
 
 .grid {
@@ -43,4 +50,13 @@
 
 .grid-row-5 {
   grid-template-rows: repeat(5, 1fr);
+}
+
+/* MODAL GRIDS */
+.grid-col-2-modal {
+  grid-template-columns: 2fr 1fr;
+}
+
+.grid-col-3-modal {
+  grid-template-columns: repeat(3, 1fr);
 }

@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+.hide {
+  display: none;
+}
+
 .main-header {
   background-color: var(--secondary-bg-color);
   color: var(--secondary-font-color);
@@ -74,4 +78,81 @@
 .action-btns > button {
   padding: 25px;
   font-size: 1.2rem;
+}
+
+/* MODAL */
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 1;
+  background-color: rgba(158, 158, 158, 0.5);
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+
+.modal-container {
+  width: 800px;
+  margin: 0 auto;
+  background-color: var(--secondary-bg-color);
+  color: var(--secondary-font-color);
+}
+
+.modal-header {
+  background-color: var(--highlight-color);
+  padding: 1rem;
+}
+
+.modal-content {
+  padding: 1rem;
+}
+
+.form-wrapper {
+  max-width: 400px;
+  width: 100%;
+}
+
+.form-wrapper > div {
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.input-field > label {
+  width: 170px;
+  display: inline-block;
+}
+
+.input-field > div {
+  padding: 0.5rem;
+  display: inline-block;
+}
+
+/* .input {
+  padding: 0.5rem;
+} */
+
+#clear-num-pad {
+  background-color: var(--secondary-highlight-color);
+  color: var(--secondary-font-color);
+}
+
+.check-out-btns {
+  width: 400px;
+  justify-items: center;
+}
+
+.check-out-btns > div {
+  width: 100%x;
+  padding: 30px;
+}
+
+.check-out-btns > div > button {
+  width: 100px;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  background-color: var(--highlight-color);
+  color: var(--primary-font-color);
 }
