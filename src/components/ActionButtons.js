@@ -14,7 +14,7 @@ const ActionButtons = () => {
 
     const clearSelected = () => {
         const clearedSelectedNumbers = [];
-        const BET_TOTAL = "0.00"
+        const BET_TOTAL = 0
         setSelectedNumbers(clearedSelectedNumbers)
         setBetValue(BET_TOTAL)
     }

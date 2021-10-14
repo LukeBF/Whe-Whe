@@ -8,9 +8,9 @@ const SelectedNumbersHolder = () => {
 
     const {selectedNumbers} = useContext(SelectedNumbersContext)
     const {betValue, setBetValue} = useContext(BetValueContext)
-    
     const updatedSelectedNumbers = [...selectedNumbers]    
 
+    console.log(betValue)
     return (
         <>
             <div>

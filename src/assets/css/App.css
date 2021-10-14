@@ -130,9 +130,9 @@
   display: inline-block;
 }
 
-/* .input {
+.input {
   padding: 0.5rem;
-} */
+}
 
 #clear-num-pad {
   background-color: var(--secondary-highlight-color);

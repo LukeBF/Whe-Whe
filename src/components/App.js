@@ -22,16 +22,17 @@ import NumbersContext from '../context/NumbersContext'
 import SelectedNumbersContext from '../context/SelectedNumbersContext'
 import BetValueContext from '../context/BetValueContext'
 import CurrencyValuesContext from '../context/CurrencyValuesContext'
+import ReceiveCashContext from '../context/ReceiveCashContext';
+import ChangeContext from '../context/ChangeContext';
 
 const App = () => {
 
     const TOTAL_NUMBERS = 20
-    // const CURRENCY_BTNS = 4
-
     const BET_AMT = 0
+    const CASH_RECD = 0
+    const CHANGE_AMT = 0
 
     let numberBtnsArr = []
-    // let currencyBtnsArr = []
 
     for(let i=1; i<=TOTAL_NUMBERS; i++)
     {
@@ -45,9 +46,11 @@ const App = () => {
     //   currencyBtnsArr.push(currencyValue)
     // }
 
+    const [cashReceived, setCashReceived] = useState(CASH_RECD)
     const [numberBtns, setNumberBtns] = useState(numberBtnsArr)
     const [selectedNumbers, setSelectedNumbers] = useState([])
     const [betValue, setBetValue] = useState(BET_AMT)
+    const [changeAmt, setChangeAmt] = useState(CHANGE_AMT)
     const [currencyValues, setCurrencyValues] = useState([
       {
         value: 1
@@ -71,6 +74,8 @@ const App = () => {
         <SelectedNumbersContext.Provider value={{selectedNumbers,setSelectedNumbers}}>
         <BetValueContext.Provider value={{betValue,setBetValue}}>
         <CurrencyValuesContext.Provider value={{currencyValues,setCurrencyValues}}>
+        <ReceiveCashContext.Provider value={{cashReceived, setCashReceived}}>
+        <ChangeContext.Provider value={{changeAmt, setChangeAmt}}>
           <Switch>
               <Route exact path="/">
                   <HomePage />
@@ -79,21 +84,13 @@ const App = () => {
                   <CashOutPage />
               </Route>
           </Switch>
+        </ChangeContext.Provider>
+        </ReceiveCashContext.Provider>
         </CurrencyValuesContext.Provider>  
         </BetValueContext.Provider>
         </SelectedNumbersContext.Provider>
         </NumbersContext.Provider>
       </Router>
-        {/* <NumbersContext.Provider value={{numberBtns,setNumberBtns}}>
-          <SelectedNumbersContext.Provider value={{selectedNumbers,setSelectedNumbers}}>
-            <BetValueContext.Provider value={{betValue,setBetValue}}>
-              <CurrencyValuesContext.Provider value={{currencyValues,setCurrencyValues}}> */}
-                {/* <HomePage /> */}
-                {/* <CashOutPage /> */}
-              {/* </CurrencyValuesContext.Provider>  
-            </BetValueContext.Provider>
-          </SelectedNumbersContext.Provider>
-        </NumbersContext.Provider>   */}
     </div>
   )
 }
