@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Inter", sans-serif;
+}
+
 .hide {
   display: none;
 }
@@ -15,11 +19,16 @@
   position: relative;
   top: 0;
   width: 100%;
-  height: 5vh;
+  padding: 16px 0;
+  /* height: 10vh; */
 }
 
 .game-screen {
   background-color: var(--primary-bg-color);
+  background-image: url("/src/assets/img/bg-image-2.jpg");
+  background-repeat: none;
+  background-size: cover;
+  background-position: center center;
   height: calc(100vh - 5vh);
   position: absolute;
   width: 100%;
@@ -40,6 +49,7 @@
   border-radius: 50%;
   border-style: none;
   font-size: 1.2rem;
+  cursor: pointer;
 }
 
 .center-panel,

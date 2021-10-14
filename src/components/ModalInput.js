@@ -3,24 +3,19 @@ import BetValueContext from '../context/BetValueContext'
 import ReceiveCashContext from '../context/ReceiveCashContext'
 import ChangeContext from '../context/ChangeContext'
 
+import ModalSelection from './ModalSelection'
+
 const ModalInput = () => {
 
     const {betValue} = useContext(BetValueContext)
     const {cashReceived} = useContext(ReceiveCashContext)
     const {changeAmt, setChangeAmt} = useContext(ChangeContext)
 
-    // const addAmtReceived = (e) => {
-        
-    //     const numberPadValue = e.target.value
-    //     const newReceivedValue = amtReceived + numberPadValue
-    //     setAmtReceived(newReceivedValue)
-    //     setReceivedAmt(numberPadValue)
-    //     setAmtReceived(newReceivedAmt)
-    // }
-
     /**
      * Add onChange to calculate the change when amount received changes
      */
+
+
 
     return (
         <>

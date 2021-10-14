@@ -28,9 +28,9 @@ import ChangeContext from '../context/ChangeContext';
 const App = () => {
 
     const TOTAL_NUMBERS = 20
-    const BET_AMT = 0
-    const CASH_RECD = 0
-    const CHANGE_AMT = 0
+    const BET_AMT = ""
+    const CASH_RECD = ""
+    const CHANGE_AMT = ""
 
     let numberBtnsArr = []
 

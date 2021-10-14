@@ -9,7 +9,9 @@ const CurrencyButtons = (props) => {
     const appendValue = (e) => {
         const cashValue = e.target.value
         const totalBet = betValue + parseInt(cashValue)
-        setBetValue(totalBet)
+        
+        setBetValue(parseInt(totalBet))
+        // console.log(typeof(betValue))
     }
 
     return (

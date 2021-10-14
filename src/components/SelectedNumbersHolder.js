@@ -10,7 +10,7 @@ const SelectedNumbersHolder = () => {
     const {betValue, setBetValue} = useContext(BetValueContext)
     const updatedSelectedNumbers = [...selectedNumbers]    
 
-    console.log(betValue)
+    
     return (
         <>
             <div>

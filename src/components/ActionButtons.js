@@ -21,8 +21,8 @@ const ActionButtons = () => {
 
     return (
         <>
-            <Link to="/cash">CASH</Link>
-            <Link to="" onClick={clearSelected}>CLEAR</Link>
+            <button><Link to="/cash">CASH</Link></button>
+            <button><Link to="" onClick={clearSelected}>CLEAR</Link></button>
         </>
     )
 }
