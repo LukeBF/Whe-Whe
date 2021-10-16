@@ -126,6 +126,15 @@ body {
   font-size: 1.2rem;
 }
 
+.active-button {
+  background-color: var(--primary-highlight-color);
+  color: var(--secondary-font-color);
+}
+
+.inactive-buton {
+  background-color: var(--default-color);
+}
+
 .right-panel {
   padding: 20px;
 }

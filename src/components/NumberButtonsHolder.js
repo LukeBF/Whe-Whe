@@ -5,11 +5,11 @@ import NumbersContext from '../context/NumbersContext'
 const NumberButtonsHolder = () => {
     
     const {numberBtns} = useContext(NumbersContext)
-
+    console.log(numberBtns)
     return (
         <>
             {numberBtns.map((btn)=>(
-                <NumberButton key={btn.id} id={btn.id} selected={btn.isSelected} /> 
+                <NumberButton key={btn.id} id={btn.id} isSelected={btn.isSelected}/> 
             ))}
         </>
     )

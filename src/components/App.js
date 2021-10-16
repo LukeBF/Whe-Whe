@@ -37,15 +37,9 @@ const App = () => {
 
     for(let i=1; i<=TOTAL_NUMBERS; i++)
     {
-        const numberItem = {id:i, isSelected:false}
+        const numberItem = {id:i, isSelected:false, btnValue:i}
         numberBtnsArr.push(numberItem)
     }
-
-    // for(let i=0; i<CURRENCY_BTNS; i++)
-    // {
-    //   const currencyValue = {id:i, value:}
-    //   currencyBtnsArr.push(currencyValue)
-    // }
 
     const [cashReceived, setCashReceived] = useState(CASH_RECD)
     const [numberBtns, setNumberBtns] = useState(numberBtnsArr)
