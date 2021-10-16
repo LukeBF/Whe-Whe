@@ -1,16 +1,18 @@
 import React from 'react'
 
+import { Link } from 'react-router-dom'
+
 const ModalActionBtns = () => {
     return (
         <>
             <div>
                 <button>
-                    <a href="">Confirm</a>
+                    <Link to="">Confirm</Link>
                 </button>
             </div>  
             <div>
                 <button>
-                    <a href="/">Close</a>
+                    <Link to="/home">Close</Link>
                 </button>
             </div>   
         </>

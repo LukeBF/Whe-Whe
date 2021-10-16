@@ -1,19 +1,20 @@
 :root {
-  --primary-bg-color: #aed6f1;
-  --secondary-bg-color: #2c3e50;
+  --primary-bg-color: #3db2ff;
+  --secondary-bg-color: #ffedda;
+  --other-bg-color: #ffb830;
 
-  --primary-font-color: #000;
-  --secondary-font-color: #fff;
+  --primary-font-color: #11144c;
+  --secondary-font-color: #ffffff;
+  --other-font-color: #ffb830;
 
-  --primary-btn-color: #d5d8dc;
-  --action-btns: #f1c40f;
+  --primary-btn-color: #ffffff;
 
-  --highlight-color: #fcb415;
-  --secondary-highlight-color: #ff5733;
+  --primary-highlight-color: #ff2442;
 }
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 .grid {

@@ -12,6 +12,7 @@ import {
 // Components
 import HomePage from '../pages/HomePage'
 import CashOutPage from '../pages/CashOutPage'
+import WelcomePage from '../pages/WelcomePage';
 
 // CSS
 import '../assets/css/App.css'
@@ -78,6 +79,9 @@ const App = () => {
         <ChangeContext.Provider value={{changeAmt, setChangeAmt}}>
           <Switch>
               <Route exact path="/">
+                  <WelcomePage />
+              </Route>
+              <Route path="/home">
                   <HomePage />
               </Route>
               <Route path="/cash">

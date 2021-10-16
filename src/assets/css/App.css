@@ -12,23 +12,61 @@ body {
   display: none;
 }
 
-.main-header {
-  background-color: var(--secondary-bg-color);
-  color: var(--secondary-font-color);
-  text-align: center;
+/* Welcome Page */
+.welcome-container {
   position: relative;
-  top: 0;
-  width: 100%;
-  padding: 16px 0;
-  /* height: 10vh; */
-}
-
-.game-screen {
   background-color: var(--primary-bg-color);
   background-image: url("/src/assets/img/bg-image-2.jpg");
   background-repeat: none;
   background-size: cover;
   background-position: center center;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-content > h1 {
+  font-family: "Permanent Marker", cursive;
+  text-shadow: 4px 2px 4px #000000;
+  font-size: 8rem;
+  color: var(--other-font-color);
+  z-index: 1;
+}
+
+.action-btn {
+  width: 20%;
+  margin: 0 auto;
+  padding: 16px 32px;
+  margin-top: 15px;
+  background-color: var(--primary-btn-color);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 2rem;
+  z-index: 1;
+}
+
+.color-overlay {
+  width: 100%;
+  height: 100%;
+  background: var(--primary-bg-color);
+  opacity: 0.7;
+  position: absolute;
+}
+
+/* Main Game Screen - Home */
+.main-header {
+  font-family: "Permanent Marker", cursive;
+  word-spacing: 10px;
+  background-color: var(--other-bg-color);
+  color: var(--primary-font-color);
+  text-align: center;
+  width: 100%;
+}
+
+.game-screen {
+  background-color: var(--primary-bg-color);
   height: calc(100vh - 5vh);
   position: absolute;
   width: 100%;
@@ -44,17 +82,36 @@ body {
 }
 
 .currency > div > button {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   border-style: none;
   font-size: 1.2rem;
   cursor: pointer;
+  box-shadow: -5px -3px 10px var(--primary-font-color),
+    3px 3px 5px rgba(94, 104, 121, 0.288);
 }
 
 .center-panel,
 .right-panel {
   justify-content: center;
+}
+
+.right-panel {
+  background-color: var(--secondary-bg-color);
+  border-radius: 30px;
+  margin: 10px;
+  height: 90vh;
+  font-size: 3;
+}
+
+.right-panel > p,
+.right-panel > h2 {
+  font-size: 2rem;
+}
+
+.right-panel > div > p {
+  font-size: 1.5rem;
 }
 
 .center-panel {
@@ -87,7 +144,16 @@ body {
 
 .action-btns > button {
   padding: 25px;
+  border: none;
+  border-radius: 10px;
   font-size: 1.2rem;
+  width: 75%;
+  font-size: 2rem;
+}
+
+.action-btns > button:hover {
+  background: var(--primary-font-color);
+  color: var(--secondary-font-color);
 }
 
 /* MODAL */
@@ -107,12 +173,13 @@ body {
 .modal-container {
   width: 800px;
   margin: 0 auto;
-  background-color: var(--secondary-bg-color);
+  background-color: var(--primary-bg-color);
   color: var(--secondary-font-color);
 }
 
 .modal-header {
-  background-color: var(--highlight-color);
+  background-color: var(--other-bg-color);
+  color: var(--primary-font-color);
   padding: 1rem;
 }
 
@@ -145,7 +212,7 @@ body {
 }
 
 #clear-num-pad {
-  background-color: var(--secondary-highlight-color);
+  background-color: var(--primary-highlight-color);
   color: var(--secondary-font-color);
 }
 
@@ -163,6 +230,7 @@ body {
   width: 100px;
   padding: 0.5rem;
   margin-bottom: 1rem;
-  background-color: var(--highlight-color);
+  border: none;
+  background-color: var(--secondary-bg-color);
   color: var(--primary-font-color);
 }

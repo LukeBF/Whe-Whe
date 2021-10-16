@@ -22,7 +22,7 @@ const ActionButtons = () => {
     return (
         <>
             <button><Link to="/cash">CASH</Link></button>
-            <button><Link to="" onClick={clearSelected}>CLEAR</Link></button>
+            <button><Link to="/home" onClick={clearSelected}>CLEAR</Link></button>
         </>
     )
 }
